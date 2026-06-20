@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider4XR - Book Riders Across Shimla</title>
+  <meta name="description" content="Rider4XR - Book parcel, food, medicine, cake and document delivery riders across Shimla. Google location booking, UPI payment, minimum fare ₹50 till 2.5 KM, ₹15/km and ₹10 platform fee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a href="#" class="brand"><span class="brand-icon">🏍️</span><span>Rider<span>4XR</span></span></a>
+    <nav>
+      <a href="#pricing">Pricing</a>
+      <a href="#services">Services</a>
+      <a href="#area">Areas</a>
+      <a href="#panels">Login</a>
+      <a href="#rider">Rider Job</a>
+    </nav>
+    <a class="nav-btn" href="tel:+919929562585">Call Now</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="sun"></div>
+        <div class="mountain m1"></div>
+        <div class="mountain m2"></div>
+        <div class="city city1"></div>
+        <div class="city city2"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="left">
+          <div class="badge">⚡ Shimla On-Demand Delivery</div>
+          <h1>Heavy Bike Rider Booking For Every Parcel.</h1>
+          <p class="lead">Book a Rider4XR bike rider for parcel, cakes, documents, food, medicines and gifts across Shimla hills.</p>
+          <div class="cta-row">
+            <a href="#booking" class="primary">Book Rider Now</a>
+            <a href="https://wa.me/919929562585?text=Hi%20Rider4XR%2C%20I%20want%20to%20book%20a%20rider" class="secondary">WhatsApp Booking</a>
+          </div>
+          <div class="stats">
+            <div><b>₹50</b><span>Minimum Fare</span></div>
+            <div><b>₹15/km</b><span>After 2.5 KM</span></div>
+            <div><b>20 KM</b><span>Shimla Radius</span></div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="visual-scene" aria-label="3D cartoon heavy bike rider carrying parcel in Shimla">
+            <div class="pin pin1">📍 Pickup</div>
+            <div class="pin pin2">Drop 📍</div>
+            <div class="parcel p1">📦</div>
+            <div class="parcel p2">📦</div>
+            <div class="bike-shadow"></div>
+            <div class="bike-wrap">
+              <div class="speed-lines"><i></i><i></i><i></i></div>
+              <div class="rider-head"></div>
+              <div class="rider-body">4XR</div>
+              <div class="parcel-box">RIDER4XR<br><small>PARCEL</small></div>
+              <div class="bike-body"></div>
+              <div class="bike-tank"></div>
+              <div class="bike-seat"></div>
+              <div class="handle"></div>
+              <div class="wheel w1"><span></span></div>
+              <div class="wheel w2"><span></span></div>
+              <div class="exhaust"></div>
+            </div>
+            <div class="road"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+      <div class="booking-card glass">
+        <div>
+          <span class="section-kicker">Instant Fare</span>
+          <h2>Google Location से From → To Booking</h2>
+          <p>Pickup और drop Google location से select होंगे. Current location button भी रहेगा, और fare auto-calculate होगा.</p>
+        </div>
+        <form id="fareForm">
+          <label>Pickup Location
+            <div class="input-action"><input type="text" id="from" placeholder="Search pickup on Google" /><button type="button" data-current="from">Use Current</button></div>
+          </label>
+          <label>Drop Location
+            <div class="input-action"><input type="text" id="to" placeholder="Search drop on Google" /><button type="button" data-current="to">Use Current</button></div>
+          </label>
+          <label>Parcel Type
+            <select id="parcelType"><option>Parcel</option><option>Food</option><option>Cake</option><option>Medicine</option><option>Documents</option><option>Gift</option></select>
+          </label>
+          <label>Distance KM<input type="number" id="distance" min="0" max="20" step="0.1" placeholder="Auto by Google / manual" /></label>
+          <button type="submit">Calculate Fare</button>
+          <small id="routeStatus" class="route-status">Google location loading...</small>
+        </form>
+        <div class="fare-result" id="fareResult">
+          <span>Estimated Total</span>
+          <strong>₹0</strong>
+          <small>Minimum ₹50 till 2.5 KM + ₹15/KM + ₹10 platform fee</small>
+        </div>
+        <div class="payment-box" id="paymentBox">
+          <span>Payment</span>
+          <strong id="payAmount">₹0</strong>
+          <a id="payLink" class="pay-btn" href="#">Pay by UPI</a>
+          <a id="waButton" class="wa-btn" href="https://wa.me/919929562585">Send Booking on WhatsApp</a>
+          <small>UPI ID: 9929562585@ptyes</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <span class="section-kicker">Pricing</span>
+      <h2>Simple Shimla Pricing</h2>
+      <div class="price-grid">
+        <div class="price-card"><b>0–2.5 KM</b><strong>₹60</strong><span>₹50 minimum + ₹10 fee</span></div>
+        <div class="price-card featured"><b>5 KM</b><strong>₹98</strong><span>Affordable local delivery</span></div>
+        <div class="price-card"><b>10 KM</b><strong>₹173</strong><span>Across Shimla city</span></div>
+        <div class="price-card"><b>20 KM</b><strong>₹323</strong><span>Outer Shimla radius</span></div>
+      </div>
+    </section>
+
+
+    <section class="panels" id="panels">
+      <span class="section-kicker">Login Interface</span>
+      <h2>Two Panels: Customer + Rider</h2>
+      <div class="panel-grid">
+        <div class="panel-card glass">
+          <div class="panel-head">
+            <span>👤</span>
+            <div>
+              <h3>Customer Panel</h3>
+              <p>Customer yahan login karke rider book karega, pickup-drop Google location select karega, fare dekhega aur UPI/WhatsApp se order confirm karega.</p>
+            </div>
+          </div>
+          <form class="login-form" id="customerLoginForm">
+            <label>Mobile Number<input type="tel" id="customerMobile" placeholder="Customer mobile number" /></label>
+            <label>Name<input type="text" id="customerName" placeholder="Customer name" /></label>
+            <button type="submit">Login / Continue Booking</button>
+          </form>
+        </div>
+
+        <div class="panel-card glass">
+          <div class="panel-head">
+            <span>🏍️</span>
+            <div>
+              <h3>Rider Panel</h3>
+              <p>Rider yahan login/apply karega. Driving licence compulsory rahega. Application direct WhatsApp par business owner ko chali jayegi.</p>
+            </div>
+          </div>
+          <form class="login-form rider-apply" id="riderApplyForm">
+            <label>Full Name<input type="text" id="riderName" placeholder="Rider full name" required /></label>
+            <label>Mobile Number<input type="tel" id="riderMobile" placeholder="Rider mobile number" required /></label>
+            <label>City / Area<input type="text" id="riderCity" placeholder="Shimla / nearby area" /></label>
+            <label>Vehicle Type<select id="vehicleType"><option>Bike</option><option>Scooter</option></select></label>
+            <label>Driving Licence No.<input type="text" id="licenceNo" placeholder="DL number" required /></label>
+            <label>Experience<input type="text" id="experience" placeholder="Delivery experience optional" /></label>
+            <button type="submit">Apply as Rider</button>
+          </form>
+          <small class="requirements">Required: Valid Driving Licence, Bike/Scooter, Aadhaar, Android Phone, Age 18+</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <span class="section-kicker">Services</span>
+      <h2>Anything Local, Delivered Fast</h2>
+      <div class="cards">
+        <article>📦<h3>Parcel</h3><p>Small package pickup and drop.</p></article>
+        <article>🍰<h3>Cake</h3><p>Careful bakery deliveries.</p></article>
+        <article>💊<h3>Medicine</h3><p>Urgent pharmacy pickup.</p></article>
+        <article>🍔<h3>Food</h3><p>Restaurant and home food.</p></article>
+        <article>📄<h3>Documents</h3><p>Office, bank and personal docs.</p></article>
+        <article>🎁<h3>Gifts</h3><p>Surprise gifts and flowers.</p></article>
+      </div>
+    </section>
+
+    <section class="area" id="area">
+      <div class="area-copy">
+        <span class="section-kicker">Coverage</span>
+        <h2>Shimla + 20 KM Nearby Areas</h2>
+        <p>Shimla City, Sanjauli, Dhalli, New Shimla, Khalini, Panthaghati, Tutikandi, Totu, Summer Hill, Mashobra, Kufri, Shoghi, Taradevi and nearby areas.</p>
+      </div>
+      <div class="map-card glass">
+        <div class="map-line"></div>
+        <span class="dot d1">Shimla</span><span class="dot d2">Sanjauli</span><span class="dot d3">Kufri</span><span class="dot d4">Shoghi</span>
+      </div>
+    </section>
+
+    <section class="rider" id="rider">
+      <div>
+        <span class="section-kicker">Earn With Us</span>
+        <h2>Become a Rider4XR Partner</h2>
+        <p>Local delivery, flexible timing, weekly earning and Shimla route work.</p>
+      </div>
+      <a class="primary" href="https://wa.me/919929562585?text=Hi%20Rider4XR%2C%20I%20want%20to%20join%20as%20a%20rider">Join as Rider</a>
+    </section>
+  </main>
+
+  <footer>
+    <b>Rider4XR</b>
+    <span>Delivering Across The Hills</span>
+    <a href="tel:+919929562585">+91 99295 62585</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
