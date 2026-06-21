@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin - Rider4XR</title>
+  <script>document.documentElement.dataset.theme=localStorage.r4Theme||'dark'</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadAdmin()">
+<header>
+  <div class="brand"><div class="logo"><img src="assets/logo_icon.png" alt="Rider4XR logo"></div><div>Owner Admin<br><small>Private control panel</small></div></div>
+  <button class="ghost" onclick="logout()">Logout</button>
+</header>
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><small>Orders</small><b id="totalOrders">0</b></div>
+    <div class="stat"><small>Collection</small><b id="collection">₹0</b></div>
+    <div class="stat"><small>Rider Payout</small><b id="payout">₹0</b></div>
+    <div class="stat"><small>Company</small><b id="margin">₹0</b></div>
+  </div>
+  <div class="grid admin-grid" style="margin-top:18px">
+    <section class="card"><h2>Rider Applications</h2><div id="apps" class="list"></div></section>
+    <section class="card"><h2>All Orders</h2><div id="allRides" class="list"></div></section>
+    <section class="card"><h2>Rider Dashboard</h2><div id="riderDash" class="list"></div></section>
+    <section class="card"><h2>Customer Dashboard</h2><div id="customerDash" class="list"></div></section>
+    <section class="card"><h2>UPI Settlements</h2><div id="settlements" class="list"></div></section>
+    <section class="card"><h2>Ranking / Prize</h2><div id="rankingsAdmin" class="list"></div></section>
+    <section class="card"><h2>Support / Issue Tickets</h2><div id="issues" class="list"></div></section>
+    <section class="card"><h2>Customer Reviews</h2><div id="reviewsAdmin" class="list"></div></section>
+    <section class="card"><h2>Customer / Rider Control</h2><div id="controls" class="list"></div></section>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

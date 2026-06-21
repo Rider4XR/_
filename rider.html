@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rider - Rider4XR</title>
+  <script>document.documentElement.dataset.theme=localStorage.r4Theme||'dark'</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadRider()">
+<header>
+  <div class="brand"><div class="logo"><img src="assets/logo_icon.png" alt="Rider4XR logo"></div><div><span id="riderName">Rider</span><br><small>Order ring panel</small></div></div>
+  <button class="ghost" onclick="logout()">Logout</button>
+</header>
+<main class="wrap">
+  <div class="grid">
+    <section class="card" id="ringBox">
+      <h2>Rider Status</h2>
+      <button onclick="setOnline(true)">Online</button>
+      <button class="ghost" onclick="setOnline(false)">Offline</button>
+      <p class="hint">Nearby order aate hi sound/vibration alert chalega.</p>
+    </section>
+    <section class="card">
+      <h2>Earnings</h2>
+      <div class="stats" style="grid-template-columns:1fr 1fr"><div class="stat"><small>Completed</small><b id="done">0</b></div><div class="stat"><small>Total</small><b id="earn">₹0</b></div></div>
+    </section>
+    <section class="card">
+      <h2>Settlement</h2>
+      <div class="stats" style="grid-template-columns:1fr 1fr"><div class="stat"><small>Cash Rides</small><b id="cashRides">0</b></div><div class="stat"><small>UPI Due</small><b id="pendingSettle">₹0</b></div></div>
+      <p class="hint">3 cash rides ke baad 24 hours me UPI settlement जरूरी hai.</p>
+    </section>
+    <section class="card">
+      <h2>Score</h2>
+      <div class="stat"><small>Ranking Points</small><b id="riderScore">0</b></div>
+    </section>
+  </div>
+  <section class="card" style="margin-top:18px">
+    <h2>New Ride Ring</h2>
+    <div id="orders" class="list"></div>
+  </section>
+  <section class="card" style="margin-top:18px">
+    <h2>My Rides</h2>
+    <div id="riderRides" class="list"></div>
+  </section>
+  <section class="card" style="margin-top:18px">
+    <h2>UPI Settlement Submit</h2>
+    <p class="hint">UPI ID: <b>9929562585@ptyes</b>. Cash settlement accepted nahi hai.</p>
+    <div class="field"><label>UPI Transaction ID</label><input id="txnId" placeholder="Transaction ID"></div>
+    <div class="field"><label>Amount Sent</label><input id="settleAmount" type="number" placeholder="Settlement amount"></div>
+    <button onclick="submitSettlement()">Submit + WhatsApp Screenshot</button>
+  </section>
+  <section class="card" style="margin-top:18px">
+    <h2>Ranking Board</h2>
+    <p class="hint">Ranking ride count par depend karegi, KM par nahi.</p>
+    <div id="rankings" class="list"></div>
+  </section>
+  <section class="card" style="margin-top:18px">
+    <h2>Rider Help</h2>
+    <div class="field"><label>Issue Type</label><select id="riderIssue"><option>Settlement issue</option><option>Customer call nahi उठा raha</option><option>Wrong address</option><option>Customer absent</option><option>Payment dispute</option><option>Vehicle issue</option><option>Emergency</option><option>Cancel/unblock request</option><option>Other</option></select></div>
+    <div class="field"><label>Message</label><textarea id="riderIssueMsg" placeholder="Issue detail"></textarea></div>
+    <button class="ghost" onclick="sendSupport('rider')">WhatsApp Admin</button>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
