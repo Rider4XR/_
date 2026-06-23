@@ -1,9 +1,0 @@
-{
-  "name": "Rider4XR Demo",
-  "short_name": "Rider4XR",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#05060b",
-  "theme_color": "#ff3030",
-  "icons": []
-}
