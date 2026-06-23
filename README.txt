@@ -1,0 +1,1 @@
+Upload index.html to GitHub Pages root. Demo OTP is 1234. Current location needs HTTPS. Rider beep needs Enable Beep tap.
