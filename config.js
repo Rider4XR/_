@@ -1,2 +1,0 @@
-const CONFIG = { appName: "Rider4XR", demoMode: true, demoOtp: "1234", currency: "₹", defaultLocation: { lat: 31.1048, lng: 77.1734, name: "Shimla, Himachal Pradesh" }, couponCode: "WELCOME10" };
-const KEYS = { session: "r4xr_session_mobile", pendingLogin: "r4xr_pending_login", users: "r4xr_users", rides: "r4xr_rides", staff: "r4xr_staff_admins", orderCounter: "r4xr_order_counter" };
